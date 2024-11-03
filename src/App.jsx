@@ -46,7 +46,7 @@ function App() {
       <h1 className="text-center mb-4 halloween-title">
         <FaGhost className="ghost-icon" /> Gemini AI Halloween Chat
       </h1>
-      <div className="card shadow-lg p-5 custom-card halloween-card mb-5">
+      <div className="card shadow-lg p-4 custom-card halloween-card">
         <div className="form-group mb-4">
           <label htmlFor="userInput" className="form-label halloween-label">
             Masukkan pertanyaan seram Anda:
@@ -60,11 +60,11 @@ function App() {
             onChange={(e) => setInputUser(e.target.value)}
           />
         </div>
-        <div>
+        <div className="d-flex justify-content-between flex-wrap">
           <button
             onClick={handlePromptSubmit}
             type="button"
-            className="btn btn-warning w-25 me-2 halloween-submit"
+            className="btn btn-warning w-100 me-2 mb-2 mb-md-0 halloween-submit"
             disabled={loading || !inputUser.trim()}
           >
             {loading ? 'Memanggil Hantu...' : 'Kirim'}
@@ -72,7 +72,7 @@ function App() {
           <button
             onClick={handleReset}
             type="button"
-            className="btn btn-dark w-25 halloween-reset"
+            className="btn btn-dark w-100 halloween-reset"
             disabled={!inputUser && !response}
           >
             Reset
