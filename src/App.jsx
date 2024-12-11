@@ -8,7 +8,7 @@ function App() {
   const [inputUser, setInputUser] = useState('');
   const [response, setResponse] = useState('');
   const [loading, setLoading] = useState(false);
-  const apiKey = 'AIzaSyCbCzeXSnEJRxx2d-sqVq-RHzGh_lQGwCM';
+  const apiKey = 'AIzaSyCsUvcab6F8N4JgHzaUWGirjNxNNm0mQ74';
 
   const genAI = new GoogleGenerativeAI(apiKey);
   const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash-latest' });
